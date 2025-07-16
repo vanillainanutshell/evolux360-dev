@@ -171,7 +171,7 @@ export default function ContactForm() {
           >
             <form onSubmit={handleSubmit}>
               <Grid container spacing={3}>
-                <Grid item xs={12} md={6}>
+                <Grid item xs={12}>
                   <TextField
                     label="Nome *"
                     name="nome"
@@ -182,7 +182,7 @@ export default function ContactForm() {
                     helperText={errors.nome}
                   />
                 </Grid>
-                <Grid item xs={12} md={6}>
+                <Grid item xs={12}>
                   <TextField
                     label="Email *"
                     name="email"
@@ -194,7 +194,7 @@ export default function ContactForm() {
                     helperText={errors.email}
                   />
                 </Grid>
-                <Grid item xs={12} md={6}>
+                <Grid item xs={12}>
                   <TextField
                     label="Telefone *"
                     name="telefone"
@@ -205,7 +205,7 @@ export default function ContactForm() {
                     helperText={errors.telefone}
                   />
                 </Grid>
-                <Grid item xs={12} md={6}>
+                <Grid item xs={12}>
                   <TextField
                     label="Empresa"
                     name="empresa"
