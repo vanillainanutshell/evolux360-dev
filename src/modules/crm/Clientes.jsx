@@ -93,8 +93,7 @@ export default function Clientes() {
 
   const handleDeleteConfirm = async () => {
     try {
-      // Simula exclusão (implementar no dataService depois)
-      console.log('Excluindo cliente:', clienteToDelete);
+      await dataService.deleteCliente(clienteToDelete.id);
       setConfirmOpen(false);
       setClienteToDelete(null);
       setToast({ open: true, message: 'Cliente excluído com sucesso!', severity: 'success' });

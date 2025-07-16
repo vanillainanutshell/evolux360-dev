@@ -84,6 +84,28 @@ class DataService {
     });
   }
 
+  async deleteCliente(clienteId) {
+    return new Promise((resolve, reject) => {
+      setTimeout(() => {
+        try {
+          const clientes = JSON.parse(localStorage.getItem('evolux_clientes') || '[]');
+          const index = clientes.findIndex(c => c.id === clienteId);
+          
+          if (index === -1) {
+            reject(new Error('Cliente não encontrado'));
+            return;
+          }
+          
+          const clienteRemovido = clientes.splice(index, 1)[0];
+          localStorage.setItem('evolux_clientes', JSON.stringify(clientes));
+          resolve(clienteRemovido);
+        } catch (error) {
+          reject(error);
+        }
+      }, 500);
+    });
+  }
+
   // Transações
   async getTransacoes() {
     return new Promise((resolve) => {
