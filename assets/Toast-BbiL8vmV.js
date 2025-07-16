@@ -1,1 +1,0 @@
-import{j as t,U as c,V as e}from"./index-abhKa5Lo.js";function h({open:s,onClose:r,message:i,severity:a="success",autoHideDuration:n=4e3}){return t.jsx(c,{open:s,autoHideDuration:n,onClose:r,anchorOrigin:{vertical:"top",horizontal:"right"},children:t.jsx(e,{onClose:r,severity:a,sx:{width:"100%"},children:i})})}export{h as T};
