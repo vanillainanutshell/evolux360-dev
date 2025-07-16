@@ -1,5 +1,5 @@
 import React, { memo, Suspense } from 'react';
-import { HashRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import LoadingSpinner from '../components/LoadingSpinner';
 import ErrorBoundary from '../components/ErrorBoundary';
 
@@ -27,7 +27,7 @@ const ProtectedRoute = React.lazy(() => import('../components/ProtectedRoute'));
 function AppRoutes() {
   return (
     <ErrorBoundary>
-      <HashRouter>
+      <BrowserRouter>
         <Suspense fallback={<LoadingSpinner message="Carregando página..." />}>
           <Routes>
         {/* Páginas públicas (sem layout) */}
@@ -64,7 +64,7 @@ function AppRoutes() {
         <Route path="*" element={<NotFound />} />
           </Routes>
         </Suspense>
-      </HashRouter>
+      </BrowserRouter>
     </ErrorBoundary>
   );
 }
