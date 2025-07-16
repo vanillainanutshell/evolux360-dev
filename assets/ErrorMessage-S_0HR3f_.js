@@ -1,1 +1,0 @@
-import{j as r,B as t,V as a,O as n,ay as o}from"./main-CGwiwnLm.js";function x({message:s="Erro ao carregar dados",onRetry:e}){return r.jsxs(t,{sx:{p:4,textAlign:"center"},children:[r.jsx(a,{severity:"error",sx:{mb:2},children:s}),e&&r.jsx(n,{variant:"outlined",startIcon:r.jsx(o,{}),onClick:e,children:"Tentar Novamente"})]})}export{x as E};
